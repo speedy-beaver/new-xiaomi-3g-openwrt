@@ -16,14 +16,6 @@ pipeline {
         sh 'ls -l .vuepress/dist'
       }
     }
-    stage('Test 2') {
-      steps {
-        sh 'cat .vuepress/dist/index.html'
-        sh 'cat .vuepress/dist/404.html'
-        sh '''echo This might be it myfirstgithub
-echo "TOTAL $myfirstgithub"'''
-      }
-    }
     stage('Deploy') {
       environment {
         GITHPW = credentials('mysecondgithub')
