@@ -33,6 +33,10 @@ git push -f --set-upstream https://$GITHPW_PSW@github.com/speedy-beaver/speedy-b
       }
     }
     stage('Notify') {
+      environment {
+        PUSHOVER_USER = credentials('pushover_user')
+        PUSHOVER_TOKEN = credentials('pushover_token')
+      }
       steps {
         sh '''curl -s --form-string \'user=$PUSHOVER_USER\' --form-string \'token=$PUSHOVER_TOKEN\' --form-string \'message=Done downloading $BUILD_TAG\'
  '''
