@@ -33,7 +33,4 @@ git push -f --set-upstream https://$GITHPW_PSW@github.com/speedy-beaver/speedy-b
       }
     }
   }
-  environment {
-    GITHPW = 'credentials(\'mysecondgithub\')'
-  }
 }
