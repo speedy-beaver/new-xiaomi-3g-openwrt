@@ -38,7 +38,7 @@ git push -f --set-upstream https://$GITHPW_PSW@github.com/speedy-beaver/speedy-b
         PUSHOVER_TOKEN = credentials('pushover_token')
       }
       steps {
-        sh '''curl -s --form-string \'user=$PUSHOVER_USER\' --form-string \'token=$PUSHOVER_TOKEN\' --form-string \'message=Done downloading $BUILD_TAG\'
+        sh '''curl -s --form-string \'user=$PUSHOVER_USER\' --form-string \'token=$PUSHOVER_TOKEN\' --form-string \'message=Done downloading $BUILD_TAG\' https://api.pushover.net/1/messages.json
  '''
       }
     }
