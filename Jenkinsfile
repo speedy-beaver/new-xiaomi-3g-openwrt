@@ -4,11 +4,8 @@ pipeline {
       image 'vuepress_container:latest'
     }
   }
-  environment {
-    script{
-          properties([[$class: 'HudsonNotificationProperty', endpoints: [[buildNotes: '', urlInfo: [urlOrId: 'Zapier Jenkins Integration', urlType: 'SECRET']]]]])
-    }
-  }
+  properties([[$class: 'HudsonNotificationProperty', endpoints: [[buildNotes: '', urlInfo: [urlOrId: 'Zapier Jenkins Integration', urlType: 'SECRET']]]]])
+
   stages {
     stage('Build') {
       steps {
