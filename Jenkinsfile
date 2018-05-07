@@ -3,7 +3,9 @@ pipeline {
     docker {
       image 'vuepress_container:latest'
     }
-
+  }
+  options {
+    [$class: 'HudsonNotificationProperty', endpoints: [[buildNotes: '', urlInfo: [urlOrId: 'Zapier Jenkins Integration', urlType: 'SECRET']]]]
   }
   stages {
     stage('Build') {
