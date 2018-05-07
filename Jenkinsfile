@@ -46,7 +46,9 @@ git push -f --set-upstream https://$GITHPW_PSW@github.com/speedy-beaver/speedy-b
   }
   post {
     always {
-      properties([[$class: 'HudsonNotificationProperty', endpoints: [[buildNotes: '', urlInfo: [urlOrId: 'Zapier Jenkins Integration', urlType: 'SECRET']]]]])
+      script{
+        properties([[$class: 'HudsonNotificationProperty', endpoints: [[buildNotes: '', urlInfo: [urlOrId: 'Zapier Jenkins Integration', urlType: 'SECRET']]]]])
+      }
     }
   }
 }
