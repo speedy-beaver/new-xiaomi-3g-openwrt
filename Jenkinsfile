@@ -1,4 +1,7 @@
 pipeline {
+  script{
+        properties([[$class: 'HudsonNotificationProperty', endpoints: [[buildNotes: '', urlInfo: [urlOrId: 'Zapier Jenkins Integration', urlType: 'SECRET']]]]])
+  }
   agent {
     docker {
       image 'vuepress_container:latest'
@@ -41,13 +44,6 @@ git push -f --set-upstream https://$GITHPW_PSW@github.com/speedy-beaver/speedy-b
         sh '''curl -s --form-string user=${PUSHOVER_USER} --form-string token=${PUSHOVER_TOKEN} --form-string message=Done-$BUILD_TAG https://api.pushover.net/1/messages.json
  '''
         sh 'env'
-      }
-    }
-  }
-  post {
-    always {
-      script{
-        properties([[$class: 'HudsonNotificationProperty', endpoints: [[buildNotes: '', urlInfo: [urlOrId: 'Zapier Jenkins Integration', urlType: 'SECRET']]]]])
       }
     }
   }
