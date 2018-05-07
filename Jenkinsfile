@@ -1,4 +1,6 @@
-properties([[$class: 'HudsonNotificationProperty', endpoints: [[buildNotes: '', urlInfo: [urlOrId: 'Zapier Jenkins Integration', urlType: 'SECRET']]]]])
+properties([[$class: 'HudsonNotificationProperty', 
+             endpoints: [[buildNotes: '', urlInfo: [urlOrId: 'Zapier Jenkins Integration', urlType: 'SECRET']]]]]
+          )
 
 pipeline {
   agent {
