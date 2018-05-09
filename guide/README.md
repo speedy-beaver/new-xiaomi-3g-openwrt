@@ -75,7 +75,7 @@ Now the router is paired and connected to the Xiaomi account.
 ### Get root password for your router and install SSH
 Navigate to [Xiaomi MiWiFi support site](https://d.miwifi.com/rom/ssh) and login with your Xiaomi account.
 
-:::Warning
+:::warning
 In every step the server will rewrite the URL back to '''http://....''' and fail to load the page. Edit the URL in the location bar to read '''https://...'''
 :::
 
