@@ -37,8 +37,8 @@ git push -f --set-upstream https://$GITHPW_PSW@github.com/speedy-beaver/speedy-b
       PUSHOVER_USER = credentials('pushover_user')
       PUSHOVER_TOKEN = credentials('pushover_token')      
     }
-    success{
+/*    success{
       httpRequest(url: 'https://api.pushover.net/1/messages.json', httpMode: 'POST', ignoreSslErrors: true, requestBody: "token=${PUSHOVER_TOKEN}&user=${PUSHOVER_USER}&message=Success")
-    }
+    }*/
   }
 }
