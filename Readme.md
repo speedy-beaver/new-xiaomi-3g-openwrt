@@ -10,7 +10,7 @@ features:
 - title: Full Control
   details: Install OpenWrt and enjoy maximum flexibility and rich functionality 
 - title: Beautiful Design
-  details: 'Fan-less setup connect in complete silence at high-speed to the internet  '
+  details: 'Fan-less setup connects in complete silence to the broadband internet'
 - title: Open-Source 
   details: 'Missing or broken features? Great news: you can fix it yourself!'
 - title: At Your Fingertips 
