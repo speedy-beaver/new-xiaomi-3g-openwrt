@@ -11,13 +11,13 @@ Although the name might imply, this router does not have 3G - or any other 3GPP 
 ### Naming
 The device's literal name translated from Chinese is _Xiaomi Router 3G_, with _Xiaomi_ being the company's name. There might have been earlier intentions to brand the WiFi router product line as _MiWiFi_ which would explain why Xiaomi is distributing information and firmware updates at [miwifi.com](miwifi.com).
 
-## Preparations
-### Xiaomi Account
-Create a Xiaomi account [here](http://account.xiaomi.com) - this account is required to get the ssh binary and the serial number specific root password
-
 OpenWrt/LEDE Project label the router's [wiki page](https://wiki.openwrt.org/toh/xiaomi/mir3g) with _Xiaomi Mi WiFi R3G (Mi Wifi Router 3G / MIR3G / MI3G)_ and the openwrt software uses the profile name ```mir3g```.
 
 Recently Xiaomi has started to distribute one of their router products also in India, where a genuine [English language page](http://www.mi.com/in/mi-router-3c/) calls the specific product Mi Router 3C. Based on that it can be assumed Xiaomi's intention is to use _Mi Router_ as the international name for the product line, which will be used throughout this document.
+
+## Preparations
+### Xiaomi Account
+Create a Xiaomi account [here](http://account.xiaomi.com) - this account is required to get the ssh binary and the serial number specific root password
 
 ### Cable up for maximum convenience
 The web interface of Mi Router 3G is only available in Chinese. It can be translated by Chrome's inline translation function. To facilitate this the computer running browser needs to stay connected to the internet. To achieve that the router can be connected with Ethernet to that same machine. 
@@ -75,7 +75,9 @@ Now the router is paired and connected to the Xiaomi account.
 ### Get root password for your router and install SSH
 Navigate to [Xiaomi MiWiFi support site](https://d.miwifi.com/rom/ssh) and login with your Xiaomi account.
 
-***In every step the server will rewrite the URL back to '''http://....''' and fail to load the page. Edit the URL in the location bar to read '''https://...'''***
+:::Warning
+In every step the server will rewrite the URL back to '''http://....''' and fail to load the page. Edit the URL in the location bar to read '''https://...'''
+:::
 
 ![](./pictures/get_ssh_en.png)
 ![](./pictures/get_ssh_cn.png)
