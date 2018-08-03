@@ -53,7 +53,7 @@ Once the router has finished flashing and has rebooted, indicated by the LED bei
 |![](./pictures/7th_screen_cn.png)|![](./pictures/7th_screen_en.png)|
 
 ### Pairing Router with Xiaomi Service
-This step of the process is run on an Android or iOS device.
+This step is run on an Android or iOS device.
 
 Install the Mi WiFi app for [Google Play Store for Android](https://play.google.com/store/apps/details?id=com.xiaomi.router&hl=en) or for [iOS from Apples's App store](https://itunes.apple.com/us/app/mi-wi-fi/id859962702?mt=8)
 
@@ -62,7 +62,7 @@ Start Up Mi WiFi app and login with the Xiaomi account created earlier:
 |![](./pictures/81-open_app.png)|![](./pictures/82-sign-in-app.png)|
 |:---------:|:-----------:|
 
-Connect the device to the just created WiFi network through the system preferences of the mobile phone:
+Connect to the just created WiFi network on the router through the system preferences of the mobile phone:
 
 <img src="./pictures/80-select-phone-wifi.png" width="400">
 
