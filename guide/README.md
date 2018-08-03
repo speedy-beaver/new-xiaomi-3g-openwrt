@@ -121,6 +121,9 @@ reboot
 The router will reboot, once back up the LED will turn into solid blue.
 
 ### Install OpenWrt Webfrontend
+::: tip Installed in 18.06.0 Release
+This step is most probably not needed. Webfrontend was available running a sysupgrade to 18.06.0 on my router. Feedback is welcome.
+:::
 The OpenWrt installation will have no WiFi configured so the only way to connect is through the white Ethernet ports of the router.
 
 Reconfigure the interface on the machine connecting to the router to use DHCP. The computer will receive an IP address from the 192.168.1.0/24 range.
