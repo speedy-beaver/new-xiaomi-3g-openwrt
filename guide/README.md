@@ -8,6 +8,9 @@ Detailed write-up including screen-shots and -grabs based on descriptions from [
 :::warning Disclaimer
 Although the name might imply, this router does not have 3G - or any other 3GPP  standardized - radio
 :::
+::: warning Known Issues in OpenWRT 18.06
+The release notes of 18.06 mention as know issue: ```Devices using the mt76 wireless driver may experience stability issues on 2.4GHz```
+:::
 ### Naming
 The device's literal name translated from Chinese is _Xiaomi Router 3G_, with _Xiaomi_ being the company's name. There might have been earlier intentions to brand the WiFi router product line as _MiWiFi_ which would explain why Xiaomi is distributing information and firmware updates at [miwifi.com](miwifi.com).
 
@@ -85,9 +88,9 @@ In every step the server will rewrite the URL back to '''http://....''' and fail
 Click the button to the right and download the ssh installation package ```miwifi_ssh.bin```.
 
 Download the OpenWrt firmware files
-- [https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-mir3g-squashfs-kernel1.bin](https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-mir3g-squashfs-kernel1.bin)
+- [https://downloads.openwrt.org/releases/18.06.0/targets/ramips/mt7621/openwrt-18.06.0-ramips-mt7621-mir3g-squashfs-kernel1.bin](https://downloads.openwrt.org/releases/18.06.0/targets/ramips/mt7621/openwrt-18.06.0-ramips-mt7621-mir3g-squashfs-kernel1.bin)
 
-- [https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-mir3g-squashfs-rootfs0.bin](https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-mir3g-squashfs-rootfs0.bin)
+- [https://downloads.openwrt.org/releases/18.06.0/targets/ramips/mt7621/openwrt-18.06.0-ramips-mt7621-mir3g-squashfs-rootfs0.bin](https://downloads.openwrt.org/releases/18.06.0/targets/ramips/mt7621/openwrt-18.06.0-ramips-mt7621-mir3g-squashfs-rootfs0.bin)
 
 Place ```miwifi_ssh.bin```, ```kernel1.bin``` and ```rootfs0.bin``` on the FAT formatted USB flash drive after removing the developer firmware installation file, i.e. the ```miwifi.bin``` from earlier.
 
