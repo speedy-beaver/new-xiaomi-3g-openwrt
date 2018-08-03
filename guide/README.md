@@ -8,8 +8,8 @@ Detailed write-up including screen-shots and -grabs based on descriptions from [
 :::warning Disclaimer
 Although the name might imply, this router does not have 3G - or any other 3GPP  standardized - radio
 :::
-::: warning Known Issues in OpenWRT 18.06
-The release notes of 18.06 mention as know issue: ```Devices using the mt76 wireless driver may experience stability issues on 2.4GHz```
+::: danger Known Issues in OpenWRT 18.06
+The release notes of 18.06 mention as known issue ```Devices using the mt76 wireless driver may experience stability issues on 2.4GHz``` which might affect this device.
 :::
 ### Naming
 The device's literal name translated from Chinese is _Xiaomi Router 3G_, with _Xiaomi_ being the company's name. There might have been earlier intentions to brand the WiFi router product line as _MiWiFi_ which would explain why Xiaomi is distributing information and firmware updates at [miwifi.com](miwifi.com).
