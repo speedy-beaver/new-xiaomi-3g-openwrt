@@ -87,10 +87,10 @@ In every step the server will rewrite the URL back to '''http://....''' and fail
 
 Click the button to the right and download the ssh installation package ```miwifi_ssh.bin```.
 
-Download the OpenWrt firmware files
-- [https://downloads.openwrt.org/releases/18.06.0/targets/ramips/mt7621/openwrt-18.06.0-ramips-mt7621-mir3g-squashfs-kernel1.bin](https://downloads.openwrt.org/releases/18.06.0/targets/ramips/mt7621/openwrt-18.06.0-ramips-mt7621-mir3g-squashfs-kernel1.bin)
+Download the OpenWrt firmware files (updated links on 20191110 - did not try fresh install procedure with this specific version of OpenWRT)
+- [http://downloads.openwrt.org/releases/18.06.4/targets/ramips/mt7621/openwrt-18.06.4-ramips-mt7621-mir3g-squashfs-kernel1.bin](http://downloads.openwrt.org/releases/18.06.4/targets/ramips/mt7621/openwrt-18.06.4-ramips-mt7621-mir3g-squashfs-kernel1.bin)
 
-- [https://downloads.openwrt.org/releases/18.06.0/targets/ramips/mt7621/openwrt-18.06.0-ramips-mt7621-mir3g-squashfs-rootfs0.bin](https://downloads.openwrt.org/releases/18.06.0/targets/ramips/mt7621/openwrt-18.06.0-ramips-mt7621-mir3g-squashfs-rootfs0.bin)
+- [http://downloads.openwrt.org/releases/18.06.4/targets/ramips/mt7621/openwrt-18.06.4-ramips-mt7621-mir3g-squashfs-rootfs0.bin](http://downloads.openwrt.org/releases/18.06.4/targets/ramips/mt7621/openwrt-18.06.4-ramips-mt7621-mir3g-squashfs-rootfs0.bin)
 
 Place ```miwifi_ssh.bin```, ```kernel1.bin``` and ```rootfs0.bin``` on the FAT formatted USB flash drive after removing the developer firmware installation file, i.e. the ```miwifi.bin``` from earlier.
 
