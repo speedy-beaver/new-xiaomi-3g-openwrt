@@ -23,7 +23,7 @@ jobs:
         run: ls -l .vuepress/dist
       - name: Deploy to website
         env: 
-          GITHUB_TOKEN: ${{ secrets.githubAccess }}
+          GITHUB_TOKEN: ${{ secrets.githubAccess2 }}
         run: |
           cd .vuepress/dist
           sudo git config --global user.email "github@se.iler.de"
