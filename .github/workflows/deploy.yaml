@@ -1,0 +1,34 @@
+name: Vuepress Deployment
+# This workflow is triggered on pushes to the repository.
+on: [push]
+
+jobs:
+  install_dependencies:
+    name: Install Dependencies and Build the website
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install stuff
+        run: |
+          sudo apt-get -y update
+          sudo apt-get -y install git
+          sudo apt-get -y install curl
+          sudo apt-get -y install npm
+      - name: Install vuepress
+        run: sudo npm install -g vuepress
+      - name: Get my website
+        uses: actions/checkout@v2
+      - name: run vuepress
+        run: sudo vuepress build
+      - name: Test the build 
+        run: ls -l .vuepress/dist
+      - name: Deploy to website
+        env: 
+          GITHUB_TOKEN: ${{ secrets.githubAccess }}
+        run: |
+          cd .vuepress/dist
+          sudo git config --global user.email "github@se.iler.de"
+          sudo git config --global user.name "speedy-beaver"
+          sudo git init
+          sudo git add -A
+          sudo git commit -m \'deploy\'
+          sudo git push -f --set-upstream https://$GITHUB_TOKEN@github.com/speedy-beaver/speedy-beaver.github.io master
