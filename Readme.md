@@ -4,7 +4,7 @@ actionText: Get Started
 actionLink: /guide/
 features:
 - title: Economic Solution 
-  details: Premium quality at a fair price - the good stuff from China
+  details: Fair quality at a fair price - the good stuff from China
 - title: Qualcomm-Free 
   details: Only Taiwan's finest silicon found its way into this router
 - title: Full Control
