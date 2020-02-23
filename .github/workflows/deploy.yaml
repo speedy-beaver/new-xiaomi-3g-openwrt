@@ -18,15 +18,20 @@ jobs:
       - name: Get my website
         uses: actions/checkout@v2
       - name: run vuepress
-        run: sudo vuepress build
+        run: |
+          cd content
+          sudo vuepress build
       - name: Test the build 
-        run: ls -l .vuepress/dist
+        run: |
+          cd content
+          ls -l .vuepress/dist
       - name: Deploy to website
         env: 
-          GITHUB_TOKEN: ${{ secrets.githubAccess2 }}
+          GITHUB_TOKEN: ${{ secrets.githubAccess }}
+          GITHUB_EMAIL: ${{ secrets.githubEmail }}
         run: |
-          cd .vuepress/dist
-          sudo git config --global user.email "github@se.iler.de"
+          cd content/.vuepress/dist
+          sudo git config --global user.email "$GITHUB_EMAIL"
           sudo git config --global user.name "speedy-beaver"
           sudo git init
           sudo git add -A
