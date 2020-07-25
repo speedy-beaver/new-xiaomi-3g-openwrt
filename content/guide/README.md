@@ -11,6 +11,9 @@ Although the name might imply, this router does not have 3G - or any other 3GPP 
 ::: danger Known Issues in OpenWRT 18.06
 The release notes of 18.06 mention as known issue ```Devices using the mt76 wireless driver may experience stability issues on 2.4GHz``` which might affect this device.
 :::
+::: warning Snapshots in July 2020 
+The guide is updated to link to the latest OpenWRT development snapshot images. The included uplift to Linux kernel 5.4 has subjectively create a more stable 2.4 GHz WiFi experience on this specific device. 
+:::
 ### Naming
 The device's literal name translated from Chinese is _Xiaomi Router 3G_, with _Xiaomi_ being the company's name. There might have been earlier intentions to brand the WiFi router product line as _MiWiFi_ which would explain why Xiaomi is distributing information and firmware updates at [miwifi.com](miwifi.com).
 
@@ -37,7 +40,9 @@ On the interface connecting the router:
 ## Main Process
 ### Flash Developer Firmware on Router
 Put the developer firmware for Mi Router 3G from here [miwifi_r3g_firmware_c2175_2.25.122.bin](http://bigota.miwifi.com/xiaoqiang/rom/r3g/miwifi_r3g_firmware_c2175_2.25.122.bin) on a FAT formatted USB flash drive and rename to ```miwifi.bin```. 
-
+:::tip MiWiFi CDN 
+As of July 2020, th above link fails to download, because Xiaomi have migrated to a new CDN provider, the old firmware files got migrated but no redirects were setup. This [link](http://cdn.cnbj1.fds.api.mi-img.com/xiaoqiang/rom/r3g/miwifi_r3g_firmware_c2175_2.25.122.bin) should yield the sought after firmware.
+:::
 Plug USB flash drive into router, hold the reset button pressed, and power the router up. 
 
 When the yellow LED starts blinking, the flashing process has started and the reset button can be released. 
@@ -87,10 +92,21 @@ In every step the server will rewrite the URL back to '''http://....''' and fail
 
 Click the button to the right and download the ssh installation package ```miwifi_ssh.bin```.
 
-Download the OpenWrt firmware files (updated links on 20191110 - did not try fresh install procedure with this specific version of OpenWRT)
-- [http://downloads.openwrt.org/releases/18.06.4/targets/ramips/mt7621/openwrt-18.06.4-ramips-mt7621-mir3g-squashfs-kernel1.bin](http://downloads.openwrt.org/releases/18.06.4/targets/ramips/mt7621/openwrt-18.06.4-ramips-mt7621-mir3g-squashfs-kernel1.bin)
+Download the OpenWrt firmware files (updated links on 20200725 to latest stable release - did not try fresh install procedure with this specific version of OpenWRT)
+- [https://downloads.openwrt.org/releases/19.07.3/targets/ramips/mt7621/openwrt-19.07.3-ramips-mt7621-xiaomi_mir3g-squashfs-kernel1.bin](https://downloads.openwrt.org/releases/19.07.3/targets/ramips/mt7621/openwrt-19.07.3-ramips-mt7621-xiaomi_mir3g-squashfs-kernel1.bin)
 
-- [http://downloads.openwrt.org/releases/18.06.4/targets/ramips/mt7621/openwrt-18.06.4-ramips-mt7621-mir3g-squashfs-rootfs0.bin](http://downloads.openwrt.org/releases/18.06.4/targets/ramips/mt7621/openwrt-18.06.4-ramips-mt7621-mir3g-squashfs-rootfs0.bin)
+- [https://downloads.openwrt.org/releases/19.07.3/targets/ramips/mt7621/openwrt-19.07.3-ramips-mt7621-xiaomi_mir3g-squashfs-rootfs0.bin](https://downloads.openwrt.org/releases/19.07.3/targets/ramips/mt7621/openwrt-19.07.3-ramips-mt7621-xiaomi_mir3g-squashfs-rootfs0.bin)
+
+
+Snapshot installation - As of this writing in July 2020, the OpenWRT development snapshots for this device include Linux kernel 5.4 which subjectively have increased the stability of the 2.4 GHz WiFi experience so these are provided as an _alternative_ to the above stable release. Do not mix files between stable and snapshot.
+:::warning Might brick device
+As always with development snapshots that are generated nighly, there is the risk that this specific one might brick your device or be unstable in any other way. If you do not understand what exactly you are doing please read up in the OpenWRT documentation about snapshots and stability. Installing snapshots might not be for you.
+:::
+- [https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-xiaomi_mir3g-squashfs-kernel1.bin]
+(https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-xiaomi_mir3g-squashfs-kernel1.bin)
+
+- [https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-xiaomi_mir3g-squashfs-rootfs0.bin]
+(https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-xiaomi_mir3g-squashfs-rootfs0.bin)
 
 Place ```miwifi_ssh.bin```, ```kernel1.bin``` and ```rootfs0.bin``` on the FAT formatted USB flash drive after removing the developer firmware installation file, i.e. the ```miwifi.bin``` from earlier.
 
@@ -121,8 +137,8 @@ reboot
 The router will reboot, once back up the LED will turn into solid blue.
 
 ### Install OpenWrt Webfrontend
-::: tip Installed in 18.06.0 Release
-This step is most probably not needed. Webfrontend was available running a sysupgrade to 18.06.0 on my router. Feedback is welcome.
+::: tip Installed in 19.07.3 Release
+This step is not needed when installing stable only when installing a snapshot.
 :::
 The OpenWrt installation will have no WiFi configured so the only way to connect is through the white Ethernet ports of the router.
 
