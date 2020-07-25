@@ -98,15 +98,13 @@ Download the OpenWrt firmware files (updated links on 20200725 to latest stable 
 - [https://downloads.openwrt.org/releases/19.07.3/targets/ramips/mt7621/openwrt-19.07.3-ramips-mt7621-xiaomi_mir3g-squashfs-rootfs0.bin](https://downloads.openwrt.org/releases/19.07.3/targets/ramips/mt7621/openwrt-19.07.3-ramips-mt7621-xiaomi_mir3g-squashfs-rootfs0.bin)
 
 
-Snapshot installation - As of this writing in July 2020, the OpenWRT development snapshots for this device include Linux kernel 5.4 which subjectively have increased the stability of the 2.4 GHz WiFi experience so these are provided as an _alternative_ to the above stable release. Do not mix files between stable and snapshot.
+Snapshot Download - As of this writing in July 2020, the OpenWRT development snapshots for this device include Linux kernel 5.4 which subjectively have increased the stability of the 2.4 GHz WiFi experience so these are provided as an _alternative_ to the above stable release. Do not mix files between stable and snapshot.
 :::warning Might brick device
 As always with development snapshots that are generated nighly, there is the risk that this specific one might brick your device or be unstable in any other way. If you do not understand what exactly you are doing please read up in the OpenWRT documentation about snapshots and stability. Installing snapshots might not be for you.
 :::
-- [https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-xiaomi_mir3g-squashfs-kernel1.bin]
-(https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-xiaomi_mir3g-squashfs-kernel1.bin)
+- [https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-xiaomi_mir3g-squashfs-kernel1.bin](https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-xiaomi_mir3g-squashfs-kernel1.bin)
 
-- [https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-xiaomi_mir3g-squashfs-rootfs0.bin]
-(https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-xiaomi_mir3g-squashfs-rootfs0.bin)
+- [https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-xiaomi_mir3g-squashfs-rootfs0.bin](https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-xiaomi_mir3g-squashfs-rootfs0.bin)
 
 Place ```miwifi_ssh.bin```, ```kernel1.bin``` and ```rootfs0.bin``` on the FAT formatted USB flash drive after removing the developer firmware installation file, i.e. the ```miwifi.bin``` from earlier.
 
